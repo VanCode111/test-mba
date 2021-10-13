@@ -1,0 +1,101 @@
+@import "../../styles/variables";
+
+.module-card {
+  position: relative;
+  padding-top: 29px;
+  &__content {
+    display: flex;
+    gap: 81px;
+    align-items: flex-start;
+  }
+  &__title {
+    font-family: Styrene A Web;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 120%;
+    white-space: nowrap;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 140px;
+    background-color: $red;
+    height: 2px;
+    top: 0px;
+    left: 0px;
+  }
+  &__btn-open {
+    display: none;
+    height: 51px;
+    width: 100%;
+    background-color: $light;
+  }
+}
+
+@media (max-width: 900px) {
+  .module-card {
+    overflow: hidden;
+    padding: 0;
+    &:before {
+      display: none;
+    }
+    &__content {
+      display: block;
+    }
+    &__btn-open {
+      display: flex;
+      align-items: center;
+      padding-left: 24px;
+      font-family: "Styrene A Web";
+      font-style: normal;
+      font-weight: 300;
+      font-size: 18px;
+
+      line-height: 130%;
+      & p {
+        position: relative;
+        padding-left: 44px;
+        &::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          transform: translate(0, -50%);
+          left: 0;
+          margin-right: 27px;
+          background: no-repeat center;
+          background-image: url("../../assets/images/plus.svg");
+          width: 18px;
+
+          height: 18px;
+        }
+      }
+      &.open {
+        background-color: $red;
+      }
+      &.open p {
+        color: #fff;
+        &::before {
+          background-image: url("../../assets/images/minus.svg");
+        }
+      }
+    }
+    &__title {
+      display: none;
+    }
+    &__list-item {
+      font-size: 15px;
+    }
+    &__list {
+      max-height: 0px;
+
+      transition: 0.5s all;
+      &.open {
+        margin-top: 17px;
+        transform: translate(0, 0);
+        max-height: 400px;
+      }
+    }
+  }
+}

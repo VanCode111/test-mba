@@ -1,0 +1,14 @@
+.other-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 30px;
+}
+
+@media (max-width: 900px) {
+  .other-cards {
+    grid-template-columns: 1fr;
+    &__card + &__card {
+      margin-top: 23px;
+    }
+  }
+}

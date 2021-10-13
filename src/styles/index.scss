@@ -1,0 +1,44 @@
+@import "./_variables";
+@import "./fonts";
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+.main-page {
+  &__container {
+    margin: 0 auto;
+    max-width: 1286px;
+    padding: 0px 15px 171px 15px;
+  }
+  &__title {
+    text-align: center;
+    margin-top: 71px;
+    font-family: "Styrene A Web";
+    font-weight: 700;
+    margin-bottom: 89px;
+  }
+  &__other-cards {
+    margin-top: 147px;
+  }
+}
+
+@media (max-width: 900px) {
+  .main-page {
+    &__title {
+      margin-top: 28px;
+      font-size: 28px;
+      text-align: left;
+      font-weight: 500;
+      margin-bottom: 34px;
+    }
+    &__other-cards {
+      margin-top: 23px;
+    }
+    &__container {
+      padding-bottom: 47px;
+    }
+  }
+}

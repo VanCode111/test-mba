@@ -1,0 +1,13 @@
+.programms {
+  &__programm + &__programm {
+    margin-top: 71px;
+  }
+}
+
+@media (max-width: 900px) {
+  .programms {
+    &__programm + &__programm {
+      margin-top: 35px;
+    }
+  }
+}

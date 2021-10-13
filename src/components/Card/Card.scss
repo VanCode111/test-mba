@@ -1,0 +1,42 @@
+@import "../../styles/variables";
+@import "../../styles/fonts";
+
+.card {
+  color: #fff;
+  &.red {
+    background-color: $red;
+  }
+  &__content,
+  &__content li {
+    font-family: "Styrene A Web";
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 130%;
+  }
+  &__title {
+    margin-bottom: 24px;
+    font-family: "Styrene A Web";
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 120%;
+  }
+  &.dark {
+    background-color: $dark;
+  }
+  padding: 56px 71px;
+}
+
+@media (max-width: 900px) {
+  .card {
+    padding: 31px 22px 41px 22px;
+    &__title {
+      font-size: 25px;
+    }
+    &__content,
+    &__content li {
+      font-size: 20px;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.programm-card {
+  &__title {
+    font-family: Styrene A Web;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 26px;
+    line-height: 120%;
+    margin-bottom: 54px;
+  }
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 45px;
+  }
+}
+
+@media (max-width: 900px) {
+  .programm-card {
+    &__title {
+      font-size: 22px;
+      margin-bottom: 27px;
+    }
+    &__content {
+      grid-template-columns: 1fr;
+      grid-gap: 10px;
+    }
+  }
+}
