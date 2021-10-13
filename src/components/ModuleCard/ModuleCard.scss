@@ -89,9 +89,10 @@
     }
     &__list {
       max-height: 0px;
-
+      opacity: 0;
       transition: 0.5s all;
       &.open {
+        opacity: 1;
         margin-top: 17px;
         transform: translate(0, 0);
         max-height: 400px;
